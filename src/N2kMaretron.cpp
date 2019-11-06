@@ -25,9 +25,6 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-// JWA BUG
-#include "mgos.h"
-
 #include "N2kTypes.h"
 #include "N2kMaretron.h"
 #include <string.h>
