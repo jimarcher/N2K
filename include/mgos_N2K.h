@@ -3,6 +3,16 @@
 
 #include "mgos.h"
 
+
+
+#include "NMEA2000_CAN.h"  // This will automatically choose right CAN library and create suitable NMEA2000 object
+#include "N2kMsg.h"
+#include "NMEA2000.h"
+#include "N2kMessages.h"
+
+
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
