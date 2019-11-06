@@ -2,10 +2,10 @@
 N2kMaretron.cpp
 
 Copyright (c) 2019 Vassilis Bourdakis,
-                   Timo Lappalainen, Kave Oy, www.kave.fi, 
+                   Timo Lappalainen, Kave Oy, www.kave.fi,
 
 Authors  Vassilis Bourdakis
-         Timo Lappalainen          
+         Timo Lappalainen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -24,6 +24,9 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTIO
 CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+
+// JWA BUG
+#include "mgos.h"
 
 #include "N2kTypes.h"
 #include "N2kMaretron.h"
