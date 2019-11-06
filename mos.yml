@@ -7,6 +7,10 @@ libs_version: ${mos_version}
 modules_version: ${mos_version}
 mongoose_os_version: ${mos_version}
 
+# JWA See if we can get this to compile as is
+cflags:
+  - "-Wno-error"
+
 sources:
   - src
 
