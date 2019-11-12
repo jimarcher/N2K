@@ -282,7 +282,9 @@ typedef struct {
 	    } B;
 	} CDR;
 
-  uint32_t IRAMj[2];
+  // JWA BUG Something about the identifier IRAM is breaking the build. If I change the
+	// identifier to IRAMj it compiles. So track that down!
+  uint32_t IRAM[2];
 }CAN_Module_t;
 
 #ifdef __cplusplus
