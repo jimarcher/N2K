@@ -282,6 +282,8 @@ typedef struct {
 	    } B;
 	} CDR;
     uint32_t IRAM[2];
+		// JWA TEST BUG
+		uint32_t jimtest[2];
 }CAN_Module_t;
 
 #ifdef __cplusplus
