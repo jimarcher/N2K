@@ -31,6 +31,8 @@ I/O stream used in the NMEA2000 libraries.
 #include <stdint.h>
 #include <stddef.h>
 
+
+/*  JWA TEST
 #ifdef ARDUINO
 // Arduino users get away with using the standard Stream class and its
 // subclasses. Forward declare the Stream class here and include Arduino.h in
@@ -38,6 +40,9 @@ I/O stream used in the NMEA2000 libraries.
 #include <Arduino.h>
 typedef Stream N2kStream;
 #else
+*/
+
+
 // Non Arduino platforms need to implement this themselves if they want to use
 // functions which operate on streams.
 class N2kStream {
@@ -66,6 +71,6 @@ class N2kStream {
    // Print value and newline to stream.
    size_t println(int val, uint8_t radix = 10);
 };
-#endif
+// JWA TEST #endif
 
 #endif
