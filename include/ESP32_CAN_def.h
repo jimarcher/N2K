@@ -281,9 +281,11 @@ typedef struct {
 			unsigned int reserved_24:24;            /**< \brief \internal Reserved  */
 	    } B;
 	} CDR;
-    uint32_t IRAM[2];
-		// JWA TEST BUG
-		uint32_t jimtest[2];
+
+	// JWA TEST BUG
+	uint32_t jimtest[2];
+
+  uint32_t IRAM[2];
 }CAN_Module_t;
 
 #ifdef __cplusplus
