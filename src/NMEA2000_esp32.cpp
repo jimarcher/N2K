@@ -28,8 +28,9 @@ can.h library, which may cause even naming problem.
 */
 
 // JWA BUG TEST
+// JWA These next two headers are needed for successfull compilation 
 #include <string.h>
-#include <cmath> 
+#include <cmath>
 
 
 #include "soc/dport_reg.h"

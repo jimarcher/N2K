@@ -29,10 +29,11 @@ Type definitions and utility macros used in the NMEA2000 libraries.
 
 #include <stdint.h>
 
-/* JWA See if this change can fix some of the compile issues
+/* JWA These two undef fix some of the compile issues
 */
 #undef __AVR__
 #undef ARDUINO
+
 
 
 #if !defined(ARDUINO)
@@ -62,7 +63,7 @@ extern uint32_t millis();
 // else we resort to char strings.
 
 // JWA
-#if 0
+//#if 0
 #if defined(ARDUINO)
 #include <WString.h>
 #elif defined(__AVR__)
@@ -76,7 +77,7 @@ class __FlashStringHelper;
 #endif
 
 // JWA
-#endif
+//#endif
 
 // JWA
 #define F(str) str

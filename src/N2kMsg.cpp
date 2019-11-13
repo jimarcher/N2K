@@ -21,9 +21,6 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-// JWA Add this in as a testing
-#include "millis.h"
-
 #include "N2kMsg.h"
 #include <math.h>
 #include <stdlib.h>
