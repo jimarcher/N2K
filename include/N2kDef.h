@@ -54,6 +54,9 @@ extern uint32_t millis();
 // provides to utilize the Stream class. On standard AVR8 we declare
 // our own helper class which is handled by the N2kStream. On anything
 // else we resort to char strings.
+
+// JWA
+#if 0
 #if defined(ARDUINO)
 #include <WString.h>
 #elif defined(__AVR__)
@@ -65,5 +68,13 @@ class __FlashStringHelper;
 #define F(str) str
 #endif
 #endif
+
+// JWA
+#endif
+
+// JWA
+#define F(str) str
+
+
 
 #endif
