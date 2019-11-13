@@ -21,6 +21,9 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+// JWA Add this in as a testing
+#include "millis.h"
+
 #include "N2kMsg.h"
 #include <math.h>
 #include <stdlib.h>
@@ -365,10 +368,10 @@ bool tN2kMsg::GetVarStr(size_t &StrBufSize, char *StrBuf, int &Index) const {
   if ( Type!=0x01 ) { StrBufSize=0; return false; }
   if ( StrBuf!=0 ) {
     GetStr(StrBufSize,StrBuf,Len,0xff,Index);
-  } else { 
+  } else {
     Index+=Len; // Just pass this string
   }
-  StrBufSize=Len; 
+  StrBufSize=Len;
   return true;
 }
 
@@ -440,10 +443,10 @@ int64_t byteswap(int64_t val) {
 template<typename T>
 T GetBuf(size_t len, int& index, const unsigned char* buf) {
   T v{0};
-  
+
   // This could be improved by casting the buffer to a pointer of T and
-  // doing a direct copy. That is, if unaligned data access is allowed.  
-  memcpy(&v, &buf[index], len);  
+  // doing a direct copy. That is, if unaligned data access is allowed.
+  memcpy(&v, &buf[index], len);
   index += len;
 
 #if defined(HOST_IS_BIG_ENDIAN)
@@ -459,9 +462,9 @@ void SetBuf(T v, size_t len, int& index, unsigned char* buf) {
 #if defined(HOST_IS_BIG_ENDIAN)
   v = byteswap(v);
 #endif
-  
+
   // This could be improved by casting the buffer to a pointer of T and
-  // doing a direct copy. That is, if unaligned data access is allowed. 
+  // doing a direct copy. That is, if unaligned data access is allowed.
   memcpy(&buf[index], &v, len);
   index += len;
 }
@@ -633,7 +636,7 @@ void SetBufUInt64(uint64_t v, int &index, unsigned char *buf) {
 //*****************************************************************************
 void SetBufStr(const char *str, int len, int &index, unsigned char *buf, bool UsePgm, unsigned char fillChar) {
   int i=0;
-  if ( UsePgm ) { 
+  if ( UsePgm ) {
     for (; i<len && str[i]!=0; i++, index++) {
       buf[index]=pgm_read_byte(&(str[i]));
     }

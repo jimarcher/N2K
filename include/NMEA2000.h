@@ -76,10 +76,6 @@ address anymore. See also method ReadResetAddressChanged().
 #define N2kMaxCanBusAddress 251
 #define N2kNullCanBusAddress 254
 
-// JWA TEST Bug
-// Define millis() to fix compiler errors 
-unsigned long millis(void);
-
 
 class tNMEA2000
 {
