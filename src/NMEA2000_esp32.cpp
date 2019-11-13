@@ -27,7 +27,6 @@ libraries, I implemented his code directly to the NMEA2000_esp32 to avoid extra
 can.h library, which may cause even naming problem.
 */
 
-// JWA BUG TEST
 // JWA These next two headers are needed for successfull compilation 
 #include <string.h>
 #include <cmath>
