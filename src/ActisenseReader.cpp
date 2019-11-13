@@ -24,9 +24,6 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 This is class for reading Actisense format messages from given stream.
 */
 
-// JWA Begin removal
-// #if 0
-
 #include "ActisenseReader.h"
 #include <string.h>
 
@@ -177,6 +174,3 @@ void tActisenseReader::ParseMessages() {
       if (MsgHandler!=0) MsgHandler(N2kMsg);
     }
 }
-
-// JWA end removal
-//#endif
