@@ -29,7 +29,7 @@ can.h library, which may cause even naming problem.
 
 // JWA BUG TEST
 #include <string.h>
-
+#include <cmath> 
 
 
 #include "soc/dport_reg.h"
