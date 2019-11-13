@@ -74,9 +74,4 @@ class __FlashStringHelper;
 #endif
 #endif
 
-// JWA
-//#define F(str) str
-
-
-
 #endif
