@@ -27,6 +27,11 @@ libraries, I implemented his code directly to the NMEA2000_esp32 to avoid extra
 can.h library, which may cause even naming problem.
 */
 
+// JWA BUG TEST
+#include <string.h>
+
+
+
 #include "soc/dport_reg.h"
 #include "NMEA2000_esp32.h"
 
