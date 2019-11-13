@@ -650,6 +650,9 @@ void SetBufStr(const char *str, int len, int &index, unsigned char *buf, bool Us
   }
 }
 
+
+// JWA BUG TEST
+#if 0
 //*****************************************************************************
 void PrintBuf(N2kStream *port, unsigned char len, const unsigned char *pData, bool AddLF) {
   if (port==0) return;
@@ -678,6 +681,8 @@ void tN2kMsg::Print(N2kStream *port, bool NoData) const {
   }
   port->println(F(""));
 }
+#endif // JWA
+
 
 //*****************************************************************************
 void AddByteEscapedToBuf(unsigned char byteToAdd, uint8_t &idx, unsigned char *buf, int &byteSum)
