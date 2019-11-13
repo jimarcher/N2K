@@ -637,8 +637,6 @@ void SetBufUInt64(uint64_t v, int &index, unsigned char *buf) {
 void SetBufStr(const char *str, int len, int &index, unsigned char *buf, bool UsePgm, unsigned char fillChar) {
   int i=0;
 
-  // JWA BUG TEST
-  #if 0
   if ( UsePgm ) {
     for (; i<len && str[i]!=0; i++, index++) {
       buf[index]=pgm_read_byte(&(str[i]));
@@ -648,14 +646,6 @@ void SetBufStr(const char *str, int len, int &index, unsigned char *buf, bool Us
       buf[index]=str[i];
     }
   }
-  #endif
-  // JWA Added by me
-  for (; i<len && str[i]!=0; i++, index++)
-  {
-    buf[index]=str[i];
-  }
-  // End added 
-
 
 
   for (; i<len; i++, index++)
