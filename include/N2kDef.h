@@ -41,11 +41,8 @@ extern "C" {
 // Application execution delay. Must be implemented by application.
 extern void delay(uint32_t ms);
 
-// JWA Add this macro as a test
-#ifdef NEED_MILLIS
 // Current uptime in milliseconds. Must be implemented by application.
  extern uint32_t millis();
-#endif
 }
 #endif
 
