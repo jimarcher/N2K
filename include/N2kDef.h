@@ -43,8 +43,11 @@ extern void delay(uint32_t ms);
 
 // Current uptime in milliseconds. Must be implemented by application.
  
-  // JWA TEST BUG Remove the next line to remove a duplicate def error 
-  // extern uint32_t millis();
+  // JWA TEST BUG 
+  #ifdef N2KLIB_DEF_MILLIS
+    extern uint32_t millis();
+  #endif
+
 }
 #endif
 
