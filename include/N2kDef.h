@@ -42,7 +42,9 @@ extern "C" {
 extern void delay(uint32_t ms);
 
 // Current uptime in milliseconds. Must be implemented by application.
- extern uint32_t millis();
+ 
+  // JWA TEST BUG 
+  extern uint32_t millis();
 }
 #endif
 
