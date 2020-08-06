@@ -84,6 +84,8 @@ protected:
 public:
   tNMEA2000_esp32(gpio_num_t _TxPin=ESP32_CAN_TX_PIN,  gpio_num_t _RxPin=ESP32_CAN_RX_PIN);
 
+  int tNMEA2000_esp32::CAN_stop();
+
   void InterruptHandler();
 };
 
