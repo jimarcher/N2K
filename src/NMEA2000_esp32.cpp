@@ -27,7 +27,7 @@ libraries, I implemented his code directly to the NMEA2000_esp32 to avoid extra
 can.h library, which may cause even naming problem.
 */
 
-// JWA These next two headers are needed for successfull compilation 
+// JWA These next two headers are needed for successfull compilation
 #include <string.h>
 #include <cmath>
 
@@ -283,4 +283,14 @@ void tNMEA2000_esp32::InterruptHandler() {
 //*****************************************************************************
 void ESP32Can1Interrupt(void *) {
   pNMEA2000_esp32->InterruptHandler();
+}
+
+//*****************************************************************************
+int tNMEA2000_esp32::CAN_stop()
+{
+
+	//enter reset mode
+	MODULE_CAN->MOD.B.RM = 1;
+
+	return 0;
 }
